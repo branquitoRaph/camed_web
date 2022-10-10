@@ -20,7 +20,7 @@
 			$sql = "SELECT * FROM $this->table ";
 			$stmt = Database::prepare($sql);			
 			$stmt->execute();
-			//retorna um array com os registros da tabela indexado pelo nome da coluna da tabela e por um número
+			//retorna um array com os registros da tabela indexado pelo nome da coluna da tabela e por um número aaaaaaaaa
 			return $stmt->fetchAll(PDO::FETCH_BOTH );
 			
 		}
