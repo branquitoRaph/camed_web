@@ -19,7 +19,7 @@ if (isset($_POST['Enviar'])):
 		//Criptografa a senha
 		$senha=md5($senha);
 		//Manda o comando para o banco de dados, pegando e confirmando os dados (consulta o banco de dados)
-		$sql= "SELECT idUsuario, emailUsuario FROM usuario WHERE emailUsuario= '$login' AND senhaUsuario='$senha'";
+		$sql= "SELECT idUsuario, emailUsuario FROM usuario WHERE emailUsuario= '$login' AND senha ='$senha'";
 		//Efetivamente pega os dados (conectando e mandando o comando)
 		$resultado = mysqli_query($conexao,$sql);
 		//Fechando a conexão depois de pegar os dados
