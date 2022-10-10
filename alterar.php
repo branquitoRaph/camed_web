@@ -26,7 +26,7 @@ if(isset($_POST['Enviar'])):
 	endif;
 endif;		
 ?>
-<!-- Chamando o cabeçalho da página aaaaaaa-->
+<!-- Chamando o cabeçalho da página -->
 <?php include_once 'header.php';?>
 <?php
 	//Condição de checamento de dados
