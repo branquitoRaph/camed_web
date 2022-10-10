@@ -4,7 +4,9 @@ session_start();
 //Conexão
 require_once 'conexao.php';
 //Se existir o "Enviar" , é porque clicaram no botão
-if(isset($_POST['Cadastrar'])):
+if(isset($_POST['Enviar'])):
+
+	echo "testando";
 	//Limpa os dados dos campos e envia pelo método POST para o arquivo de conexão
 	$nome = mysqli_escape_string($conexao,$_POST['nome']);
 	$sobrenome = mysqli_escape_string($conexao,$_POST['sobrenome']);
@@ -27,14 +29,17 @@ if(isset($_POST['Cadastrar'])):
 	$emailValidate = filter_var($email, FILTER_VALIDATE_EMAIL);
 	//CEP já está validando no código HTML na linha 49
 	//Fazendo o comando para o SQL
-	$sql="INSERT INTO usuario(nomeUsuario, sobrenomeUsuario, senha, dataNascimento) VALUES ('$nomeSanitize', '$sobrenomeSanitize', '$senha', '$data');
-	INSERT INTO tipo_contato(descriTipoContato) VALUES ('$emailValidate');
+	$sql="INSERT INTO usuario(nomeUsuario, sobrenomeUsuario, senha, dataNascimento) VALUES ('$nomeSanitize', '$sobrenomeSanitize', '$senha', '$data');";
+	/* INSERT INTO tipo_contato(descriTipoContato) VALUES ('$emailValidate');
 	INSERT INTO tipo_logradouro(descriTipoLogradouro) VALUES ('$logradouro');
 	INSERT INTO bairro(descriBairro) VALUES ('$bairro');
 	INSERT INTO municipio(descriMunicipio) VALUES ('$municipio');
 	INSERT INTO estado(descriEstado) VALUES ('$estado');
 	INSERT INTO endereco(numero, CEP, descricao) VALUES ('$numero', '$cep', '$descriLogradouro');
-	INSERT INTO complemento(descriComplemento) VALUES ('$complemento');";
+	INSERT INTO complemento(descriComplemento) VALUES ('$complemento');"*/
+
+	echo $sql;
+
 	//Condição de que se foi enviado
 	if(mysqli_query($conexao, $sql)):
 		//Irá fazer a sessão da mensagem (Cadastrado com sucesso)

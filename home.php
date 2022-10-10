@@ -66,7 +66,7 @@
 		<nav id="sintomas">
 			<div class="div-select">
 				<form action="exibirsintoma.php" method="post">
-					<label for="sintomas">Sintomas:</label>
+					<h2><label for="sintomas">Sintomas:</label></h2>
 					<select name="sintomas" id="sintomas">
 						<option value="1">Febre</option>
 						<option value="2">Alergia</option>

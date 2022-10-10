@@ -34,7 +34,7 @@ $sintoma= $_POST['sintomas'];
 			<tr>
 				<td><?php echo $linha['nome'];?></td>
 				<td><?php echo $linha['PMVC'];?></td>
-				<td><?php echo $linha´[$receita];?></td>
+				<td><?php echo $linha[$receita];?></td>
 			</tr>
 			<?php 
 			} 
